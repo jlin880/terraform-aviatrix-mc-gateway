@@ -63,7 +63,7 @@ The following variables are optional:
 | single_ip_snat |      ALL       |     false     | Set to true to enable Source NAT feature in single_ip mode on the gateway. Please disable AWS NAT instance before enabling this feature |
 | num_of_subnet_pairs |   AWS, Azure   |               |                        Number of public subnet and private subnet pair created. Only Support AWS, Azure Provider                        |
 |     subnet_size     |   AWS, Azure   |               |                                           Subnet Size. Only Supported for AWS, Azure Provider                                           |
-|   resource_group    |     Azure      |               |                         Name of an existing resource group or a new resource group to be created for Azure VNet                         |
+|   resource_group    |     Azure      |               |                         Name of an existing resource group or a new resource group to be created for Azure VNet                         |                     |
 ### VPN options
 |       Attribute        |   Supported CSPs    |  Default value  |                                                                     Description                                                                      |
 | :--------------------: | :-----------------: | :-------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -76,6 +76,7 @@ The following variables are optional:
 |      idle_timeout      |         ALL         |       -1        |        Value (in seconds) of idle timeout. If set, must be greater than 300; if unset, this feature is disabled. Only for VPN-enabled gateway        |
 | renegotiation_interval |         ALL         |       -1        | Value (in seconds) of the renegotiation interval. If set, must be greater than 300; if unset, this feature is disabled. Only for VPN-enabled gateway |
 |     saml_enabled       |         ALL         |      false      |                                                                  Enable/disable SAML.                                                                |
+
 
 #### Split Tunnel options
 |        Attribute         | Supported CSPs | Default value |                                                                                 Description                                                                                  |
