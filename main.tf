@@ -7,9 +7,9 @@ resource "aviatrix_vpc" "default" {
   cidr         = local.cloud == "gcp" ? null : var.cidr
   name         = local.name
 
-  subnet_size         = local.subnet_size
+  subnet_size         = var.subnet_size
   resource_group      = var.resource_group
-  num_of_subnet_pairs = local.num_of_subnet_pairs
+  num_of_subnet_pairs = var.num_of_subnet_pairs
   dynamic "subnets" {
     for_each = local.cloud == "gcp" ? ["dummy"] : [] # Workaround to make block conditional. Count not available on dynamic blocks
     content {
